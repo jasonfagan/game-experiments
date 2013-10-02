@@ -11,7 +11,7 @@ import java.awt.event.MouseMotionListener;
 interface GameEngine extends KeyListener, MouseListener, MouseMotionListener {
 
     void onScreenChanged(Rectangle rect);
-    void onGameInitialize();
+    void onGameInitialize(Rectangle rect);
     void onGameShutdown();
     void onGameRunning();
     void onPaint(Graphics2D g2d);

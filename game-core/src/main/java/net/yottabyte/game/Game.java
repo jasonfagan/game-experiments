@@ -26,8 +26,6 @@ public class Game {
 
         settings = new Settings();
 
-        gameEngine.onGameInitialize();
-
         initGUI();
 
     }
@@ -67,5 +65,9 @@ public class Game {
 
     public GameEngine getGameEngine() {
         return gameEngine;
+    }
+
+    public Rectangle getScreenRectangle() {
+        return frame.getBounds();
     }
 }

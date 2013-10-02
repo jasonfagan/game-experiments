@@ -21,6 +21,8 @@ public class Screen extends JPanel {
         this.addMouseMotionListener(game.getGameEngine());
         this.addKeyListener(game.getGameEngine());
 
+        game.getGameEngine().onGameInitialize(this.getBounds());
+
         Timer timer = new Timer(1000 / 60, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -30,6 +32,7 @@ public class Screen extends JPanel {
         timer.start();
 
         game.getGameEngine().onGameRunning();
+
     }
 
     @Override
